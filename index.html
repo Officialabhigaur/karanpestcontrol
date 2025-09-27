@@ -114,13 +114,40 @@
         </ul>
       </nav>
       <div class="cta">
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" onclick="showMobilemenu()"></i>
         <a href="tel:+917355169038" class="cta-btn"
           >LETS TALK <i class="fa-solid fa-phone-volume"></i
         ></a>
       </div>
     </header>
     <!-- header section ends here -->
+
+    <!-- mobile header  start here-->
+    <div class="mobile-header">
+      <div class="inner">
+        <ul>
+          <div class="logo-container">
+            <a href="#home" class="logo" onclick="hideMobilemenu()">KPC </a>
+            <i class="fa fa-xmark" onclick="hideMobilemenu()"></i>
+          </div>
+          <li>
+            <a href="#about" onclick="hideMobilemenu()"> About</a>
+          </li>
+          <li>
+            <a href="#services" onclick="hideMobilemenu()"> Services</a>
+          </li>
+          <li>
+            <a href="#contact" onclick="hideMobilemenu()">Contact Us</a>
+          </li>
+        </ul>
+
+        <a href="tel:+917355169038" id="cta-btn" onclick="hideMobilemenu()"
+          >LETS TALK <i class="fa-solid fa-phone-volume"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- mobile header ends here -->
 
     <!-- home section start here -->
     <section id="home">
@@ -356,8 +383,23 @@
       </div>
       <br /><br />
       <hr />
-      <p class="copyright"> 	&copy; 2025 Karan Pest Control Services. All right reserved.</p>
+      <p class="copyright">
+        &copy; 2025 Karan Pest Control Services. All right reserved.
+      </p>
     </footer>
     <!-- footer section ends here -->
+
+    <script>
+      let mobileHeader = document.querySelector(".mobile-header");
+      function showMobilemenu() {
+        mobileHeader.style.left = "0";
+        document.body.classList.add("no-scroll");
+      }
+
+      function hideMobilemenu() {
+        mobileHeader.style.left = "-100%";
+        document.body.classList.remove("no-scroll");
+      }
+    </script>
   </body>
 </html>
